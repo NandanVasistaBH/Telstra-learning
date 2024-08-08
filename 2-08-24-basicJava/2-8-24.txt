@@ -1,0 +1,14 @@
+Memory allocation for a static variable happens only once in the class area when the class is loaded in the memory. 
+It is also known as a class variable. It is common to all the objects of the class. 
+In this, a single copy of a static variable is created and shared among all the objects of the class.
+
+
+Strings are immutable
+String name =new String("nandan"); *10 times a new object is created every time in heap area
+
+String e1=nandan; *10 times all e1 to e10 fill point to same "nandan"
+if e2="Nandan" now as strings are immutable a new String is taken in StringPool and e2 points to that , e1 and e3-10 points to "nandan"
+
+
+A static block, or static initialization block, is code that is run once for each time a class is loaded into memory. 
+It is useful for setting up static variables or logging, which would then apply to every instance of the class.
