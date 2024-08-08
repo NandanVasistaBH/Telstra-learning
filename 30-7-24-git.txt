@@ -1,0 +1,19 @@
+30-7-2024
+
+GIT
+version control system / src code mngt
+the main benefit of using git is "informs us about who when what why changes have been made"
+there are 2 types : centeralized and distributed VCS
+
+distributed VCS example is GIT
+
+
+Remote Repo<----------PUSH-------------Local RePO<---------COMMIT--------Staging index<--------add--------Working
+
+
+git reset : for unstaging the files which have been added
+
+git config --global user.name nandanVasistaBH29
+
+e039325@W00000PC1MBR0H MINGW64 ~
+$ git config --global user.email coding.nandan.vasista.bh@gmail.com
