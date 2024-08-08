@@ -1,0 +1,85 @@
+1-08-24
+
+input data --> filter(match)--->Group/Aggregrate($group)----> formatting $project ---->output
+
+
+count number of movies in each category
+ db.movies.aggregate([{ $group:{_id:"$category",count:{$sum:1}}}])   
+you need match(filter) only u want filter the Input data ; here 1 is increment by 1
+
+total revenue by category
+
+movie_db> db.movies.aggregate([ { $group:{_id: "$category",total_rev:{$sum:"$revenue"}}}]) 
+
+
+avg rev for movies in 2022
+db.movies.aggregate([{$match:{year:2022}},{$group:{_id:"$year",avg_rev:{$avg:"$revenue"}}}])
+                                                                                                                                                                                              { _id: 'Action', total_rev: 6299 },                                                                                     { _id: 'Thriller', total_rev: 1260 },                                                                                   { _id: [ 'Action', 'History' ], total_rev: 1600 },                                                                      { _id: null, total_rev: 0 }                                                                                           ]
+wrong
+db.movies.aggregate([{$match:{year:2022}},{$group:{_id:"$year",avg_rev:{$avg:"$revenue"}}},{$group:{_id:"$year",tot_rev:{$sum:"$revenue"}}}])
+
+correct
+db.movies.aggregate([{$match: {year: 2022}}, {$group:{_id: "$category", totalRevenue: {$sum:"$revenue"}, avgRevenue: {$avg: "$revenue"}}}]);
+
+
+round the avg value
+db.movies.aggregate([{$match: {year: 2022}}, {$group:{_id: "$category", totalRevenue: {$sum:"$revenue"}}},{$project: {rounded_rev:{ $round : [totalRevenue,2]}}}]);
+
+
+
+
+The $push operator appends a specified value to an array. If the field is not an array, the operation will fail.
+db.students.insertOne( { _id: 1, scores: [ 44, 78, 38, 80 ] } )
+
+db.students.updateOne(
+   { _id: 1 },
+   { $push: { scores: 89 } }
+)
+
+
+The 
+$slice
+ modifier limits the number of array elements during a $push operation.
+
+{
+  $push: {
+     <field>: {
+       $each: [ <value1>, <value2>, ... ],
+       $slice: <num>
+     }
+  }
+}
+
+
+db.movies.aggregate([
+  { $project: { name: 1, year: 1, _id: 0 } }
+])
+
+db.movies.aggregate([
+  { $project: { movieTitle: "$name", releaseYear: "$year", _id: 0 } }
+])
+
+
+db.movies.aggregate([
+  { $project: { movieTitle: "$name", releaseYear: "$year", _id: 0 } }
+])
+
+db.movies.aggregate([
+  { $project: { name: 1, doubleRevenue: { $multiply: ["$revenue", 2] }, _id: 0 } }
+])
+
+db.movies.aggregate([
+  { $project: { name: 1, roundedRevenue: { $round: ["$revenue", 2] }, _id: 0 } }
+])
+
+db.movies.aggregate([{$match : {'category':'Action'}},
+ {$group:{_id:'$category', total_revenue:{$sum:'$revenue'}}},  
+{$project : {'category':1, 'total_revenue':1 }}
+])
+
+
+push have to be used in group (matching part)
+slice is used in project (formatting part)
+
+
+
