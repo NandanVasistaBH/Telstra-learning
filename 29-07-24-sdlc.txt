@@ -1,0 +1,65 @@
+SDLC
+
+what is SDLC , need , stages and types
+types => waterfall , iterative , spiral .... Agile
+
+what is agile, its adv and dadv
+agile methodologies -> SCRUM, Kanban board , LEAN , Exterme Programming
+Scrum
+kanban
+lean
+XP
+after each iteration / sprint in agile we need to get working product
+
+
+SCRUM-> 
+roles and responibility
+1. Product Owner -> interacts with clients to get req and prepares Product backlog and arrange the backlogs based on the priority
+2. Scrum Master -> interacts onbealf of the team with PO , SM uses Product backlog to create Sprint Backlog
+3. TEAM
+RESPONsibilities -> scrum meeting , review (with client) , potenial shippable product , retrospective meeting
+
+Product Backlog has 4 columns : id, story , estimation and priority
+Story will have 3 parts : As a(an) .........(who), I want to ..........(why), So that ..........(why) 
+
+In sprint backlog it works on one story -> which has multiple tasks and each task is assigned to a owner with in the scrum team
+
+
+
+
+
+Easy Parking Scrum meeting
+stories
+1. As an authorized parking person , I want to meet the coustomer , so as to drive the car to parking location ->
+2. As an authorized parking person , I want to see possible parking spots , so as to park the car ->
+3. As an authorized parking person , I want to deliver the car back to location specified , so that customer gets the car back  ->
+4. As an authorized parking person , I want be able to view all the cars parked , so as to estimate the money earned monthly yearly  ->
+5. As an unauthorized parking person , I want be able upload DL , Aadhar, phone , so as to get Authorized  ->
+
+1. As an authorized customer , I want to meet the parking person, so as to give the car to get it parked  ->
+2. As an authorized customer , I want to know the price , so as to give the car to get it parked  ->
+3. As an authorized customer , I want to know the location of the car , so as to keep track of the location  ->
+4. As an authorized customer , I want to meet the parking person , so as to pick the car  ->
+5. As an unauthorized customer , I want to be able do Google / FB sign in with phone num6ber, so as to get authorized before booking  ->
+6. As an authorized customer who have booked , I want to able to live location of the car , so as to check the location.  ->
+
+Product Backlog
+ID        |             story                       |        estimation                                    | priority
+
+
+ID	Story														Estimation			priority
+5	As an unauthorized parking person , I want be able upload DL , Aadhar, phone , so as to get Authorized  ->		1
+10	As an unauthorized customer , I want to be able do Google / FB sign in with phone number, so as to get authorized before booking  ->		2
+6	As an authorized customer , I want to meet the parking person, so as to give the car to get it parked  ->		3
+1	As an authorized parking person , I want to meet the coustomer , so as to drive the car to parking location ->		4
+7	As an authorized customer , I want to know the price , so as to give the car to get it parked  ->		5
+2	As an authorized parking person , I want to see possible parking spots , so as to park the car ->		6
+3	As an authorized customer who have booked , I want to able to live location of the car , so as to check the location.  ->		7
+9	As an authorized customer , I want to meet the parking person , so as to pick the car  ->		8
+8	As an authorized customer who have booked , I want to able to live location of the car , so as to check the location.  ->		9
+4	As an authorized parking person , I want be able to view all the cars parked , so as to estimate the money earned monthly yearly  ->		10
+
+
+diff techniques to estimate in product backlog
+
+An EPIC has mulitple user stories . 
